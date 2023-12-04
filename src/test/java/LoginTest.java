@@ -12,7 +12,7 @@ public class LoginTest extends Base {
         };
     }
 
-    @Test(dataProvider = "fillUsername")
+    @Test(dataProvider = "fillUsername", invocationCount = 5)
     public void testLoginPage(String username, String password) {
         LoginPage loginPage = new LoginPage(getDriver());
 

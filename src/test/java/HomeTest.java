@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class HomeTest extends Base {
 
-    @Test
+    @Test(invocationCount = 5)
     public void testHomePage() {
         HomePage homePage = new HomePage(getDriver());
 
