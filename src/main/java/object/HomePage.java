@@ -1,6 +1,10 @@
 package object;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage {
 
@@ -11,6 +15,12 @@ public class HomePage {
         this.driver = driver;
     }
 
-
+    public void gotoPage() {
+        driver.get(PAGE_URL);
+    }
+    public boolean isPageLoaded() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        return wait.until(ExpectedConditions.urlToBe(PAGE_URL));
+    }
 
 }
