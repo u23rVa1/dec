@@ -1,0 +1,7 @@
+<suite name="Failure example test suite - generate screenshot" verbose="1">
+    <test name="Parallel Tests">
+        <classes>
+            <class name="LoginFailTest"></class>
+        </classes>
+    </test>
+</suite>
