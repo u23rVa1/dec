@@ -1,7 +1,8 @@
 # Java Maven test Automation project
 
-### This is a Test Automation project against the training site: 
-http://training.skillo-bg.com:4200/posts/all
+### This is a Selenium WebDriver Test Automation project against this [training site](http://training.skillo-bg.com:4200/posts/all).
+Used design patterns: **Page Object Model** and **Page Factory**.
+
 
 ## Technologies:
 1. Java
