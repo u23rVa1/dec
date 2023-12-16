@@ -14,7 +14,7 @@ public class LikePostTest extends Helper {
     }
 
     @Test(dataProvider = "fillUserCredentials")
-    public void testLikeAPost(String username, String email, String password) throws InterruptedException {
+    public void testLikeAPost(String username, String email, String password) {
         // Login
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.quickLogin(username, password);
@@ -36,7 +36,5 @@ public class LikePostTest extends Helper {
 
         // Confirm toast message for liked post is shown
         Assert.assertEquals(homePage.getLikedToastMessage(), "Post liked");
-
-        Thread.sleep(4000);
     }
 }
