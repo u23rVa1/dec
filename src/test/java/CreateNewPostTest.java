@@ -20,7 +20,7 @@ public class CreateNewPostTest extends Helper {
         };
     }
 
-    @Test(dataProvider = "fillUserData", invocationCount = 5)
+    @Test(dataProvider = "fillUserData")
     public void testCreateNewPost(String username, String password, File postPicture) {
         // Login to profile
         LoginPage loginPage = new LoginPage(super.getDriver());

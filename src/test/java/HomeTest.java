@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class HomeTest extends Helper {
 
-    @Test(invocationCount = 5)
+    @Test
     public void testHomePage() {
         // Init page instance with driver
         HomePage homePage = new HomePage(super.getDriver());

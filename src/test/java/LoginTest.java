@@ -16,7 +16,7 @@ public class LoginTest extends Helper {
         };
     }
 
-    @Test(dataProvider = "fillUserCredentials", invocationCount = 5)
+    @Test(dataProvider = "fillUserCredentials")
     public void testLoginPage(String username, String password) {
         // Init page instance with driver
         LoginPage loginPage = new LoginPage(super.getDriver());

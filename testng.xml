@@ -6,6 +6,7 @@
             <class name="ProfileTest"></class>
             <class name="CreateNewPostTest"></class>
             <class name="RegisterTest"></class>
+            <class name="LikePostTest"></class>
         </classes>
     </test>
 </suite>

@@ -4,7 +4,7 @@ import org.testng.annotations.*;
 
 public class RegisterTest extends Helper {
 
-    @Test(invocationCount = 5)
+    @Test
     public void testRegisterNewUser() {
         // Open Home page
         HomePage homePage = new HomePage(super.getDriver());

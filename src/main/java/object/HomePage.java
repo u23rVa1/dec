@@ -18,6 +18,12 @@ public class HomePage {
     @FindBy(css = "app-post-detail")
     private List<WebElement> posts;
 
+    @FindBy(css = "i.fa-heart")
+    private WebElement anyPostLikeButton;
+
+    @FindBy(xpath = "//div[@role=\"alertdialog\"]")
+    private WebElement postLikedToast;
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -38,5 +44,14 @@ public class HomePage {
         } else {
             return false;
         }
+    }
+
+    public void likeAPost() {
+        anyPostLikeButton.click();
+    }
+
+    public String getLikedToastMessage() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        return wait.until(ExpectedConditions.visibilityOf(postLikedToast)).getText();
     }
 }

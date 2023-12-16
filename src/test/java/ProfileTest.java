@@ -13,7 +13,7 @@ public class ProfileTest extends Helper {
                 {"valg", "test@mails.com", "Test123!"}
         };
     }
-    @Test(dataProvider = "fillUserCredentials"/*, invocationCount = 5*/)
+    @Test(dataProvider = "fillUserCredentials")
     public void testUserProfileData(String username, String email, String password) {
         // Login to profile
         LoginPage loginPage = new LoginPage(getDriver());

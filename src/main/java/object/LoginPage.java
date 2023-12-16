@@ -64,6 +64,11 @@ public class LoginPage {
         return wait.until(ExpectedConditions.visibilityOf(successToastText)).getText();
     }
 
+    public void clickKillToastMessage() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        wait.until(ExpectedConditions.visibilityOf(successToastText)).click();
+    }
+
     public void quickLogin(String username, String password){
         gotoPage();
         fillUsernameOrEmail(username);
