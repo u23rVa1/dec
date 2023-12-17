@@ -12,10 +12,10 @@ Used design patterns: **Page Object Model** and **Page Factory**.
 5. WebDriver Manager
 
 ## Test scenarios:
-1. Home Page Test
-2. Login Test
-3. Profile test
-4. Register Test
-5. Create New Post Test
-6. Login Failure Test (for creation of screenshot)
-
+1. HomeTest - Test that HomePage is loaded correctly (Verify correct URL and Site logo are loaded, initial posts on page are loaded)
+2. LoginTest - verify User can login successfully with 2 types of credentials: UserName, and Email
+3. ProfileTest - after a login, verify correct Username of logged in User, retrieve some User profile data 
+4. RegisterTest - verify new user can successfully register (create new account) on the site. Test exists in 2 versions with minimal difference.
+5. CreateNewPostTest - verify logged in user can create a new post - upload a picture, add a random string caption, and verify posts count is updated to plus one (+1) after posting
+6. LikePostTest - after login, like the first (topmost) post, and verify success by validating the toast message for Liked post
+7. LoginFailTest - a Login Failure Test, for the creation of a screenshot after failure
